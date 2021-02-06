@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
-using DataAcces.Abstract;
+using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 
-namespace DataAcces.Concrete.InMemory
+namespace DataAccess.Concrete.InMemory
 {
     public class InMemoryProductDal : IProductDal
     {
@@ -60,6 +61,11 @@ namespace DataAcces.Concrete.InMemory
         }
 
         public Product Get(Expression<Func<Product, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<ProductDetailDto> GetProductDetails()
         {
             throw new NotImplementedException();
         }
